@@ -1,4 +1,6 @@
-package com.github.KostyaTr.springTest.config;
+package com.github.KostyaTr.springTest.config.service;
+
+import com.github.KostyaTr.springTest.config.dao.UserDao;
 
 public class UserServiceByConstr {
 
@@ -8,7 +10,7 @@ public class UserServiceByConstr {
         this.userDao = userDao;
     }
 
-    String addUser(){
+    public String addUser(){
         return "I am UserServiceByConstr have added new user: " + userDao.addUser();
     }
 }

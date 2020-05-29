@@ -1,5 +1,6 @@
-package com.github.KostyaTr.springTest.config;
+package com.github.KostyaTr.springTest.config.service;
 
+import com.github.KostyaTr.springTest.config.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -12,7 +13,7 @@ public class UserServiceBySetter {
         this.userDao = userDao;
     }
 
-    String addUser(){
+    public String addUser(){
         return "I am UserServiceBySetter have added new user: " + userDao.addUser();
     }
 }

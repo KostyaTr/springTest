@@ -1,6 +1,11 @@
-package com.github.KostyaTr.springTest.config;
+package com.github.KostyaTr.springTest.config.service;
 
-import com.github.KostyaTr.springTest.custom.annotation.Profiling;
+import com.github.KostyaTr.springTest.config.dao.DefaultUserDao;
+import com.github.KostyaTr.springTest.config.dao.JavaDaoConfig;
+import com.github.KostyaTr.springTest.config.service.UserServiceByConstr;
+import com.github.KostyaTr.springTest.config.service.UserServiceByField;
+import com.github.KostyaTr.springTest.config.service.UserServiceBySetter;
+import com.github.KostyaTr.springTest.config.service.UserServiceInjectTwoBeans;
 import com.github.KostyaTr.springTest.custom.processor.ProfilingProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,11 +33,6 @@ public class JavaConfig {
     @Bean("UserServiceInjectTwoBeans")
     public UserServiceInjectTwoBeans userServiceWithAdminDao() {
         return new UserServiceInjectTwoBeans();
-    }
-
-    @Bean("UserServiceMultipleBeans")
-    public UserServiceMultipleBeans userServiceMultipleBeans() {
-        return new UserServiceMultipleBeans();
     }
 
     @Bean("CustomProfilingProcessor")

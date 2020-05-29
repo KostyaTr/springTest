@@ -1,6 +1,7 @@
-package com.github.KostyaTr.springTest.config;
+package com.github.KostyaTr.springTest.config.service;
 
-import com.github.KostyaTr.springTest.custom.annotation.Profiling;
+import com.github.KostyaTr.springTest.config.dao.JavaDaoConfig;
+import com.github.KostyaTr.springTest.config.dao.UserDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +27,7 @@ public class UserServiceByFile {
         return userDaoName;
     }
 
-    String addUser(){
+    public String addUser(){
         return "I am UserServiceByField have added new user: " + userDao.addUser();
     }
 

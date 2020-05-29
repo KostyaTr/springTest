@@ -1,4 +1,4 @@
-package com.github.KostyaTr.springTest.config;
+package com.github.KostyaTr.springTest.config.dao;
 
 public class DefaultUserDao implements UserDao {
     @Override
