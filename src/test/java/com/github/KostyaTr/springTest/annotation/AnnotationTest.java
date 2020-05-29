@@ -19,9 +19,6 @@ public class AnnotationTest {
         final AnnotationService serviceBean = context.getBean(AnnotationService.class);
         final AnnotationDao daoBean = context.getBean(AnnotationDao.class);
 
-        System.out.println(serviceBean);
-        System.out.println(daoBean);
-
         assertEquals("I'm AnnotationDao", daoBean.getName());
         assertEquals("I'm AnnotationService and I'm AnnotationDao", serviceBean.getName());
     }

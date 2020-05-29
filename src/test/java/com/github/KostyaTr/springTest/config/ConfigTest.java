@@ -1,6 +1,7 @@
 package com.github.KostyaTr.springTest.config;
 
-import com.github.KostyaTr.springTest.custom.annotation.Profiling;
+import com.github.KostyaTr.springTest.config.dao.UserDao;
+import com.github.KostyaTr.springTest.config.service.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -64,23 +65,6 @@ public class ConfigTest {
 
         assertEquals("I am UserServiceInjectTwoBeans have added new user: Hi! I'm an Admin User",
                 serviceInjectTwoBeans.addAdminUser());
-    }
-
-    @Test
-    void beans() {
-        final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(JavaConfig.class);
-        context.refresh();
-
-        UserServiceMultipleBeans serviceMultipleBeans = context.getBean(UserServiceMultipleBeans.class);
-        DefaultUserDao defaultUserDao = context.getBean(DefaultUserDao.class);
-        AdminUserDao adminUserDao = context.getBean(AdminUserDao.class);
-
-        /*serviceMultipleBeans.setUserDao(defaultUserDao);
-        System.out.println(serviceMultipleBeans.getUser());
-
-        serviceMultipleBeans.setUserDao(adminUserDao);
-        System.out.println(serviceMultipleBeans.getUser());*/
     }
 
     @Test
