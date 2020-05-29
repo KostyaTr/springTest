@@ -5,7 +5,6 @@ import com.github.KostyaTr.springTest.annotation.service.AnnotationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
